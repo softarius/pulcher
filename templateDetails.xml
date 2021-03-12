@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="template">
+	<name>Pulcher</name>
+	<creationDate>2011-03-11</creationDate>
+	<author>Sergey Yushinin</author>
+	<authorEmail>sergey@yushinin.ru</authorEmail>
+	<authorUrl>http://yushinin.ru</authorUrl>
+	<copyright>Sergey Yushinin 2011</copyright>
+	<license>GNU/GPL</license>
+	<version>1.0</version>
+	<description>Softarius pulcher</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>assets</folder>
+	</files>
+	<positions>
+		<position>breadcrumb</position>
+		<position>left</position>
+		<position>right</position>
+		<position>top</position>
+		<position>center</position>
+		<position>footer</position>
+	</positions>
+</extension>
