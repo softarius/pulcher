@@ -2,8 +2,19 @@
 $link-color : $main-brand-color;
 $link-hover-color: $dark-accent-color;
 $body-bg: $light-shades-color;
+
+
+
 $theme-colors: (
-  primary: $main-brand-color
+  "primary": $main-brand-color,
+  "secondary":  $dark-accent-color,
+  "success":    $light-accent-color,
+  "info":        $theme-info,
+  "warning":     $theme-warning,
+  "danger":      $theme-danger,
+  "light":     darken($light-shades-color,10%),
+  "dark":      $dark-shades-color
+  
 );
 
 h2,  h3 {
