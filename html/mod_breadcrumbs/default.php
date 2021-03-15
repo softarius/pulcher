@@ -33,7 +33,6 @@ defined('_JEXEC') or die;
 			// Find last and penultimate items in breadcrumbs list
 			end($list); 
 			$last_item_key   = key($list);
-			echo $last_item_key;
 
 			// Make a link if not the last item in the breadcrumbs
 			if (!$params->get('showLast', 1)) array_pop($list);
@@ -42,7 +41,7 @@ defined('_JEXEC') or die;
 			foreach ($list as $key => $item) :
 			?>
 			    
-				<li class='breadcrumb-item<?php echo key($item)==$last_item_key?' active':''; ?>'>
+				<li class='breadcrumb-item<?php echo $key==count($list)-1?' active':''; ?>'>
 					<?php echo !empty($item->link) ? JHTML::link($item->link, $item->name) : $item->name;  ?>
 				</li>
 			<?php
