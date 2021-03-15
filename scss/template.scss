@@ -33,11 +33,10 @@
 //
 
 // Toggle global options
-//$enable-gradients: true;
-//$enable-shadows: true;
+$enable-gradients: true;
+$enable-shadows: true;
 
 // Customize some defaults
-//$body-color: $purple;
 
 $border-radius: .4rem;
 $font-family-base: Arial;
@@ -65,7 +64,7 @@ $h6-font-size:                $font-size-base;
 // @import "bootstrap/scss/forms";
 @import "bootstrap/scss/buttons";
 @import "bootstrap/scss/transitions";
-// @import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
 // @import "bootstrap/scss/input-group"; // Requires forms
 // @import "bootstrap/scss/custom-forms";
