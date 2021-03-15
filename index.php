@@ -5,18 +5,34 @@
 <head>
 	<jdoc:include type="head" />
 	<?php $template_dir = "{$this->baseurl}/templates/{$this->template}"; ?>
+	<?php
+	//	var_dump($this->params);
+	if ($this->params->get('bs_using') == 'cdn') : ?>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+	<?php endif; ?>
 
-	<link rel="stylesheet" href="<?= $template_dir ?>/assets/css/template.css" type="text/css" />
-	<link rel="stylesheet" href="<?= $template_dir ?>/assets/font/bootstrap-icons.css" type="text/css" />
+	<?php if ($this->params->get('bs_using') == 'local') : ?>
+		<link rel="stylesheet" href="<?= $template_dir ?>/assets/css/bootstrap.min.css" type="text/css" />
+		<script src="<?= $template_dir ?>/assets/js/popper.min.js"></script>
+		<script src="<?= $template_dir ?>/assets/js/bootstrap.min.js"></script>
+	<?php endif; ?>
+
+	<?php if ($this->params->get('bs_using') == 'custom') : ?>
+		<link rel="stylesheet" href="<?= $template_dir ?>/assets/css/template.css" type="text/css" />
+		<script src="<?= $template_dir ?>/assets/js/popper.min.js"></script>
+		<script src="<?= $template_dir ?>/assets/js/bootstrap.min.js"></script>
+	<?php endif; ?>
+	<!--	
 
 	<script src="<?= $template_dir ?>/assets/js/popper.min.js"></script>
-	<script src="<?= $template_dir ?>/assets/js/bootstrap.min.js"></script>
+	<script src="<?= $template_dir ?>/assets/js/bootstrap.min.js"></script> -->
 </head>
 
 <body>
 	<div class="container-fluid">
 		<div class='row'>
-			<div class='col-sm'>
+			<div class='col col-sm'>
 				<jdoc:include type="modules" name="top" />
 				<jdoc:include type="modules" name="breadcrumb" />
 			</div>
@@ -24,18 +40,18 @@
 
 		<div class='row'>
 			<?php if ($this->countModules('left')) : ?>
-				<div class='col-sm-2'>
+				<div class='col col-sm-2'>
 					<jdoc:include type="modules" name="left" />
 				</div>
 			<?php endif; ?>
 
-			<div class='col-sm-<?= 12 - (int)!!$this->countModules('left') * 2 - (int)!!$this->countModules('right') * 2; ?>'>
+			<div class='col col-sm-<?= 12 - (int)!!$this->countModules('left') * 2 - (int)!!$this->countModules('right') * 2; ?>'>
 				<jdoc:include type="message" />
 				<jdoc:include type="component" />
 			</div>
 
 			<?php if ($this->countModules('right')) : ?>
-				<div class='col-sm-2'>
+				<div class='col col-sm-2'>
 					<jdoc:include type="modules" name="right" />
 				</div>
 			<?php endif; ?>

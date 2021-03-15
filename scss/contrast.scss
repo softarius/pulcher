@@ -1,7 +1,15 @@
 @import "./colors.scss"; 
 $link-color : $main-brand-color;
 $link-hover-color: $dark-accent-color;
-$body-bg: $light-shades-color;
+$body-bg: white;
+
+
+
+div .col
+{
+	background-color: $light-shades-color;
+
+}
 
 
 

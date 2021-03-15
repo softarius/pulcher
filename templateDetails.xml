@@ -22,4 +22,23 @@
 		<position>center</position>
 		<position>footer</position>
 	</positions>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field 
+					name="bs_using" 
+					type="list" 
+					label="TPL_PULCHER_BS_USING"
+					description="TPL_PULCHER_BS_USING_DESC"
+					default='cdn'
+				>
+				<option value="cdn">cdn</option>
+				<option value="local">local</option>
+				<option value="custom">custom</option>
+			</field>
+
+			
+			</fieldset>
+		</fields>
+	</config>
 </extension>
