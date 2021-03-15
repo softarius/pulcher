@@ -42,11 +42,12 @@
 $border-radius: .4rem;
 $font-family-base: Arial;
 $font-size-base: 11pt;
+// $breadcrumb-divider: quote(">");
 
 $h1-font-size:                $font-size-base * 1.5;
 $h2-font-size:                $font-size-base * 1.4;
 $h3-font-size:                $font-size-base * 1.2;
-$h4-font-size:                $font-size-base * 1;
+$h4-font-size:                $font-size-base * 1.1;
 $h5-font-size:                $font-size-base * 1;
 $h6-font-size:                $font-size-base;
 
@@ -71,8 +72,8 @@ $h6-font-size:                $font-size-base;
 // @import "bootstrap/scss/nav";
 // @import "bootstrap/scss/navbar"; // Requires nav
 // @import "bootstrap/scss/card";
-// @import "bootstrap/scss/breadcrumb";
-// @import "bootstrap/scss/pagination";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/pagination";
 // @import "bootstrap/scss/badge";
 // @import "bootstrap/scss/jumbotron";
 // @import "bootstrap/scss/alert";
