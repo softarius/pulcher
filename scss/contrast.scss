@@ -1,0 +1,21 @@
+@import "./colors.scss"; 
+$link-color : $light-accent-color;
+$link-hover-color: $dark-accent-color;
+$body-bg: $light-shades-color;
+$theme-colors: (
+  primary: $main-brand-color
+);
+
+h3 {
+	color: $main-brand-color;
+	/*background-color: $color-primary-0;*/
+	padding: 4pt;
+	font-size: 11pt;
+}
+
+h2 {
+	color: $main-brand-color;
+	/*background-color: $color-primary-0;*/
+	padding: 4pt;
+	font-size: 12pt;
+}
