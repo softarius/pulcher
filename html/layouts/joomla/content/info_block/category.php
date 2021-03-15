@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 
 ?>
-			<dd class="category-name">
+			<dd class="category-name bi-folder2-open">
 				<?php $title = $this->escape($displayData['item']->category_title); ?>
 				<?php if ($displayData['params']->get('link_category') && $displayData['item']->catslug) : ?>
 					<?php $url = '<a href="' . JRoute::_(ContentHelperRoute::getCategoryRoute($displayData['item']->catslug)) . '" itemprop="genre">' . $title . '</a>'; ?>
