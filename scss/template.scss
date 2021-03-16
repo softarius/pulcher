@@ -1,115 +1,54 @@
-// Override Bootstrap's Sass default variables
-//
-// Nearly all variables in Bootstrap are written with the `!default` flag.
-// This allows you to override the default values of those variables before
-// you import Bootstrap's source Sass files.
-//
-// Overriding the default variable values is the best way to customize your
-// CSS without writing _new_ styles. For example, change you can either change
-// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
-// `body { color: red; }`.
+/*!
+ * Bootstrap v5.0.0-beta2 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
 
+// scss-docs-start import-stack
+// Configuration
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
 
-//
-// Bring in Bootstrap
-//
+@import "./brandbook.scss"; 
 
-// Option 1
-//
-// Import all of Bootstrap's CSS
+@import "bootstrap/scss/utilities";
 
-// @import "bootstrap/scss/bootstrap";
-
-// Option 2
-//
-// Import just the styles you need. Note that some stylesheets are required no matter what.
-
-@import "bootstrap/scss/functions"; // Required
-@import "bootstrap/scss/variables"; // Required
-@import "bootstrap/scss/mixins"; // Required
-
-//
-// Override Bootstrap here
-//
-
-// Toggle global options
-//$enable-gradients: true;
-//$enable-shadows: true;
-
-// Customize some defaults
-
-$border-radius: .4rem;
-$font-family-base: Arial;
-$font-size-base: 11pt;
-
-$btn-line-height: 11pt;
-$btn-font-size: 11pt;
-
-// $breadcrumb-divider: quote(">");
-
-$h1-font-size:                $font-size-base * 1.5;
-$h2-font-size:                $font-size-base * 1.4;
-$h3-font-size:                $font-size-base * 1.2;
-$h4-font-size:                $font-size-base * 1.1;
-$h5-font-size:                $font-size-base * 1;
-$h6-font-size:                $font-size-base;
-
-
-@import "./contrast.scss"; 
-
-
-
-
-// @import "bootstrap/scss/root";
-@import "bootstrap/scss/reboot"; // Required
-
-dd {
-  margin-bottom: 0;
-}
-
+// Layout & components
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
 @import "bootstrap/scss/type";
 @import "bootstrap/scss/images";
-// @import "bootstrap/scss/code";
+@import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
-// @import "bootstrap/scss/tables";
-//@import "bootstrap/scss/forms";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
 @import "bootstrap/scss/buttons";
 @import "bootstrap/scss/transitions";
 @import "bootstrap/scss/dropdown";
-// @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/input-group"; // Requires forms
-// @import "bootstrap/scss/custom-forms";
+@import "bootstrap/scss/button-group";
 @import "bootstrap/scss/nav";
-@import "bootstrap/scss/navbar"; // Requires nav
+@import "bootstrap/scss/navbar";
 @import "bootstrap/scss/card";
+@import "bootstrap/scss/accordion";
 @import "bootstrap/scss/breadcrumb";
 @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/badge";
-// @import "bootstrap/scss/jumbotron";
-// @import "bootstrap/scss/alert";
-// @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/media";
+@import "bootstrap/scss/badge";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/progress";
 @import "bootstrap/scss/list-group";
 @import "bootstrap/scss/close";
-// @import "bootstrap/scss/toasts";
-@import "bootstrap/scss/modal"; // Requires transitions
-// @import "bootstrap/scss/tooltip";
-// @import "bootstrap/scss/popover";
-// @import "bootstrap/scss/carousel";
-// @import "bootstrap/scss/spinners";
-@import "bootstrap/scss/utilities";
-// @import "bootstrap/scss/print";
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+@import "bootstrap/scss/carousel";
+@import "bootstrap/scss/spinners";
 
+// Helpers
+@import "bootstrap/scss/helpers";
 
-//
-// Custom styles
-//
-
-body {
-  padding: 6pt;
-}
-
-// Style Bootstrap icons
-.bi {
-  fill: currentColor;
-}
+// Utilities
+@import "bootstrap/scss/utilities/api";
+// scss-docs-end import-stack

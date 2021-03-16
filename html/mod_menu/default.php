@@ -20,7 +20,7 @@ if ($tagId = $params->get('tag_id', '')) {
 ?>
 
 
-<nav class="menu<?php echo $class_sfx; ?> mod-list" <?php echo $id; ?>>
+<nav class="menu<?php echo $class_sfx; ?> mod-list list-unstyled" <?php echo $id; ?>>
 
 	<?php
 	$mode = '';
@@ -47,7 +47,7 @@ if ($tagId = $params->get('tag_id', '')) {
 		// The next item is deeper.
 		if ($item->deeper) {
 			$mode = 'dropdown';
-			echo '<ul class="dropdown-menu" aria-labelledby="navbarDropdown">';
+			echo '<ul class="dropdown-menu list-unstyled" aria-labelledby="navbarDropdown">';
 		}
 		// The next item is shallower.
 		elseif ($item->shallower) {

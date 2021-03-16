@@ -21,6 +21,7 @@
 	<?php if ($this->params->get('bs_using') == 'custom') : ?>
 		<link rel="stylesheet" href="<?= $template_dir ?>/assets/css/template.css" type="text/css" />
 		<link rel="stylesheet" href="<?= $template_dir ?>/assets/font/bootstrap-icons.css" type="text/css" />
+		<link rel="stylesheet" href="<?= $template_dir ?>/assets/css/custom.css" type="text/css" />
 		<script src="<?= $template_dir ?>/assets/js/popper.min.js"></script>
 		<script src="<?= $template_dir ?>/assets/js/bootstrap.min.js"></script>
 

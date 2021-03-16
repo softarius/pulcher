@@ -1,0 +1,26 @@
+.dropdown:hover .dropdown-menu
+{
+    display: block;
+    background-color: var(--bs-primary);
+} 
+
+
+.nav-item
+{
+    margin: 1pt;
+    min-width: 60pt;
+   
+    background-color:  var(--bs-primary);
+    color:  var(--bs-light);
+} 
+.nav-item a
+{
+    color:  var(--bs-light);
+    padding: 4pt;   
+} 
+
+.nav-item:hover, .nav-link:hover
+{
+
+    background-color:  var(--bs-secondary);
+} 

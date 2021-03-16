@@ -1,0 +1,64 @@
+@import "bootstrap/scss/functions";
+
+
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+@import "./colors.scss"; 
+
+// Toggle global options
+//$enable-gradients: true;
+//$enable-shadows: true;
+
+// Customize some defaults
+
+$border-radius: .4rem;
+$font-family-base: Arial;
+$font-size-base: 11pt;
+
+$btn-line-height: 11pt;
+$btn-font-size: 11pt;
+
+// $breadcrumb-divider: quote(">");
+
+$h1-font-size:                $font-size-base * 1.5;
+$h2-font-size:                $font-size-base * 1.4;
+$h3-font-size:                $font-size-base * 1.2;
+$h4-font-size:                $font-size-base * 1.1;
+$h5-font-size:                $font-size-base * 1;
+$h6-font-size:                $font-size-base;
+
+$link-color : $main-brand-color;
+$link-hover-color: $dark-accent-color;
+$body-bg: white;
+
+
+
+div .col
+{
+	//background-color: $light-shades-color;
+
+}
+
+
+
+$brand-colors: (
+  "primary": $main-brand-color,
+  "secondary":  $dark-accent-color,
+  "success":    $light-accent-color,
+//  "info":        $theme-info,
+  "warning":     $theme-warning,
+//  "danger":      $theme-danger,
+  "light":     $light-shades-color,
+  "dark":      $dark-shades-color,
+  "disaster": red
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $brand-colors);
+
+@debug $theme-colors;
+
+h2,  h3 {
+	color: $main-brand-color;
+}
